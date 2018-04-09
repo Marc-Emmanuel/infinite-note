@@ -1,0 +1,125 @@
+ html {
+     transform: translate3d(0, 0, 0);
+     transform-origin: 0 0 0;
+     transform: translate(0, 0) scale(1);
+     overflow: hidden;
+     white-space: nowrap;
+     background-color: white;
+ }
+ body {
+     margin: 0px;
+ }
+ .markdown {
+     font-family: monospace;
+     font-size: 14pt;
+     cursor: text;
+     background-color: rgba(48, 48, 48, 0.1);
+     border-radius: 8px;
+     padding-top: 20px;
+     padding-left: 8px;
+     padding-bottom: 10px;
+     padding-right: 8px;
+     outline: none;
+     min-width: 4em;
+     overflow: auto;
+     -webkit-user-select: text;
+ }
+ .markdown:before {
+     content: attr(data-boxid);
+     position: absolute;
+     color: black;
+     left: 3px;
+     top: 3px;
+     font-size: 8pt;
+     opacity: 0.5;
+ }
+ .resizable iframe {
+     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+     border-radius: 8px;
+ }
+ .resizable .sizer {
+     background-color: transparent;
+     position: absolute;
+     right: 0px;
+     bottom: 0px;
+     width: 30px;
+     height: 30px;
+     cursor: nwse-resize;
+ }
+ .overlay {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: transparent;
+     z-index: 999999;
+     display: none;
+     cursor: nwse-resize;
+ }
+ .box {
+     position: absolute;
+     word-wrap: break-word;
+     -webkit-user-select: none;
+     cursor: move;
+ }
+ blockquote {
+     border-left: 8px solid #fafafa;
+     padding: 1rem;
+ }
+ .renderedText:hover {
+     background-color: rgba(48, 48, 48, 0.1);
+     border-radius: 8px;
+ }
+ .box:focus {
+     -webkit-user-select: text;
+     outline: none;
+     cursor: auto;
+ }
+ .box iframe {
+     width: 100%;
+     height: 100%;
+     border: 0px;
+     position: relative;
+     top: 0px;
+     left: 0px;
+ }
+ svg {
+     position: absolute;
+     overflow: visible;
+     width: 1px;
+     height: 1px;
+     z-index: 1;
+ }
+ #content {
+     overflow: visible;
+     position: absolute;
+     width: 0px;
+     height: 0px;
+     margin: 0px;
+     left: 0px;
+     top: 0px;
+ }
+ #controls {
+     position: absolute;
+     z-index: 1;
+     bottom: 0px;
+     left: 0px;
+     width: 100%;
+     z-index: 999999999;
+ }
+ .color {
+     display: inline-block;
+     margin: 2px;
+     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+     width: 30px;
+     height: 30px;
+     border-radius: 15px;
+     opacity: 0.8;
+     display: none;
+ }
+ #photo-instrument {
+     display: inline-block;
+     margin: 2px;
+     margin-left: 20px;
+     font-size: 12pt;
+     transform: translateY(-50%);
+ }
